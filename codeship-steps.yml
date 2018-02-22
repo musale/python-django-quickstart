@@ -1,0 +1,6 @@
+# This is where we define the test steps that would be run in a Codeship Pro build.
+# The build passes as long as every test step returns with a non-zero exit code.
+# See here for more: https://documentation.codeship.com/pro/builds-and-configuration/steps/
+- name: tests
+  service: python-codeship-quickstart # our command will run on an instance of the `python-codeship-quickstart` service that we've defined in the `codeship-services.yml` file
+  command: python manage.py test
